@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html", time = datetime.now())
+    return render_template("index2.html", time = datetime.now())
 
 @app.route('/calculate', methods = ['POST', 'GET'])
 def calculate():
@@ -27,4 +27,3 @@ def calculate():
     monthly_amount_to_save = (goal_to_save - (current_savings + annual_amount_left))/12
     
     return (str(round(monthly_amount_to_save)))
-
