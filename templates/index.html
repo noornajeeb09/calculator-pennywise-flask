@@ -4,10 +4,20 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
     </head>
     <body>
-        <h1>Welcome to GifBot!</h1>
-        <p>What kind of gif would you like to see?</p>
-        <form method="post" action="/yourgif">
-            <input type="text" name="gifchoice" placeholder="What kind of gif do you want to see?"/>
+        <h1>Welcome to Your Personal Savings Calculator!</h1>
+        <h2> Find out how much you need to save monthly to reach your annual goal.</h2>
+        <p>How much money do you have saved up currently?</p>
+        <form method="post" action="/calculate">
+            <input type="text" name="diffname1" placeholder="PUT QUESTIONS HERE"/>
+            <p>How much money do you make each month?</p>
+            <input type="text" name="2" placeholder="PUT QUESTIONS HERE"/>
+            <p>How much money do you spend each month?</p>
+            <input type="text" name="3" placeholder="PUT QUESTIONS HERE"/>
+            <p>How much money do you want to save annually?</p>
+            <input type="text" name="gifchoice" placeholder="PUT QUESTIONS HERE"/>
+        
+        
+            
             <input type="submit" value="Submit"/>
         </form>
     </body>
