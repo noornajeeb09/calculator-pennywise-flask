@@ -78,6 +78,7 @@ def show_login():
                return redirect(url_for('index'))
            else:
                return redirect(url_for('signup'))
+    
 
 
 # @app.route('/signup', methods = ['POST', 'GET'])
