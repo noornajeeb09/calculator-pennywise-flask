@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-image: url('https://www.employmenthelp.org/wp-content/uploads/Workshops-Header-Background.png');
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Optima, sans serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 14.27%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#Sign Up {background-color: white;}
+#Login {background-color: white;}
+#Calculator {background-color: white;}
+#Transaction Tracker {background-color: white;}
+#Analysis {background-color: white;}
+#Learn More {background-color: white;}
+</style>
+</head>
+    <body>
+        <div>
+        <button class="tablink" onclick="openPage('Home', this, 'gray')">Home</button>
+        <button class="tablink" onclick="openPage('Sign Up', this, 'gray')" id="defaultOpen">Sign Up</button>
+        <button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
+        <button class="tablink" onclick="openPage('Calculator', this, 'gray')">Calculator</button>
+        <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button>
+        <button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
+        <button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
+
+        <div id="login" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
+        <h3><center>Login</center></h3>
+        <form method="POST" action="/login"> 
+        <label for="name">Name:</label><br>
+        <input type="text" id="username" name="username" value=""><br><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password" value=""><br><br>
+        <input type="submit" value="Login"> </form>  
+        </div>
+    </body>
+</html>
