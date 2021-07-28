@@ -63,10 +63,12 @@ def show_signup():
            return redirect(url_for('login'))
 
            
-@app.route('/login', methods = ['GET', 'POST'])
-def show_login():
-   if request.method =='POST':
-       return render_template('login.html')
+@app.route('/Login', methods = ['GET', 'POST'])
+def Login():
+   if request.method =='GET':
+       #return render_template('login.html')
+       print("amin is here")
+       return redirect(url_for('Login'))
    else:
        users = mongo.db.users
        login_user = users.find_one({'username' : request.form['username']})

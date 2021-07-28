@@ -98,7 +98,7 @@ body, html {
       </b>
 </div>
 
-<div id="Sign Up" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
+<div id="Sign Up" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
   <h3><center>Sign Up</center></h3>
   <form method="POST" action="/signup"> 
   <label for="name">Name:</label><br>
@@ -108,9 +108,9 @@ body, html {
   <input type="submit" value="Sign Up"> </form>  
 </div>
 
-<div id="Login" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
+<div id="Login" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
         <h3><center>Login</center></h3>
-        <form method="POST" action="/login"> 
+        <form method="POST" action="/Login"> 
         <label for="name">Name:</label><br>
         <input type="text" id="username" name="username" value=""><br><br>
         <label for="password">Password:</label><br>
@@ -118,7 +118,7 @@ body, html {
         <input type="submit" value="Login"> </form> </div>
 
 <div id="Calculator" class="tabcontent"
-    style="background-image:url('https://weiweics.com/wp-content/uploads/2019/07/Why-do-we-use-calculators-700x445.png');  background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.crispedge.com%2Fffab0f.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
     <h1>Welcome to Your Personal Savings Calculator!</h1>
     <h2> Find out how much you need to save monthly to reach your annual goal.</h2>
     <p>How much money do you have saved up currently?</p>
@@ -134,10 +134,18 @@ body, html {
     </form>
 </div>
 
-<div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
+<div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
     <form method="post" action="/transactions">
-    <h3>Transaction Tracker</h3>
-    <p>Write stuff here.</p>
+      <h1>Transactions</h1>
+      <div class="event-list">
+        <ul>
+          {% for event in events %}
+            <li>{{ transactions.transaction }} - {{ transaction.amount }} ({{transactions.category}}) [<a href='/remove/{{event._id }}'>x</a>]</li>
+          {% endfor %}
+        </ul>
+      </div> 
+      <h3><a href="/sortevents">SORT </a>EVENTS</h3> 
+      <h3>Go to <a href="/displayform">FORM</a></h3>         
 </div>
 
 <div id="Analysis"style="background-image:url('http://argaamplus.s3.amazonaws.com/0dcec1d7-f70a-47fa-8fe9-24535fb846ef.jpg');" class="tabcontent">
@@ -145,7 +153,7 @@ body, html {
   <p>Write stuff here.</p>
 </div>
 
-<div id="Learn More" class="tabcontent">
+<div id="Learn More" class="tabcontent" style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
 <h2> Credit Cards vs. Debit Cards</h2>
 <h3>Which one is right for you? </h3>
 <p> Practice, early and often, with a credit or debit card can help you form healthy money habits as you get older. </p>
