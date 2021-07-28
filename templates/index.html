@@ -2,9 +2,7 @@
 <html>
 <head>
 <style>
-div {
-  background-image: url('https://www.employmenthelp.org/wp-content/uploads/Workshops-Header-Background.png');
-}
+
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -15,6 +13,11 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Optima, sans serif;
+}
+
+#title {
+    font-size: 75%;
+    font-family: 'Caveat', cursive;
 }
 
 /* Style tab links */
@@ -41,6 +44,10 @@ body, html {
   padding: 100px 20px;
   height: 100%;
 }
+#title {
+    font-family: 'Caveat', cursive;
+    font-size: 250%;
+}
 
 #Home {background-color: white;}
 #Sign Up {background-color: white;}
@@ -53,8 +60,8 @@ body, html {
 </head>
 <body>
 <div>
-<button class="tablink" onclick="openPage('Home', this, 'gray')">Home</button>
-<button class="tablink" onclick="openPage('Sign Up', this, 'gray')" id="defaultOpen">Sign Up</button>
+<button class="tablink" onclick="openPage('Home', this, 'gray')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Sign Up', this, 'gray')">Sign Up</button>
 <button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
 <button class="tablink" onclick="openPage('Calculator', this, 'gray')">Calculator</button>
 <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button>
@@ -74,7 +81,10 @@ body, html {
 </div>
 
 <div id="Home" class="tabcontent" style="background-image:url('https://media.istockphoto.com/photos/white-piggy-bank-on-yellow-picture-id841053770?k=6&m=841053770&s=612x612&w=0&h=egxzk5SZGQfo2m2UG4n2fYMbDna7XPj07hdAYnwIG0o='); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-  <h1><center>PennyWise: Your Personal Finance Tracker</center></h3>
+<div id="title" <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+ <h1><center> PennyWise: Your Personal Finance Tracker</center></h3></h1> </div>
   <center> <br></br>
   <h3>Planning for your future isn't scary. Be financially wise with Pennywise™!</h3></center>
   <b>
@@ -98,15 +108,14 @@ body, html {
   <input type="submit" value="Sign Up"> </form>  
 </div>
 
-<div id="login" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
+<div id="Login" class="tabcontent"style="background-image:url('https://www.cutpricewallpaper.co.uk/wp-content/uploads/2018/08/676102-LINEN-TEXTURE-SOFT-BLUE.jpg');">
         <h3><center>Login</center></h3>
         <form method="POST" action="/login"> 
         <label for="name">Name:</label><br>
         <input type="text" id="username" name="username" value=""><br><br>
         <label for="password">Password:</label><br>
         <input type="text" id="password" name="password" value=""><br><br>
-        <input type="submit" value="Login"> </form>  
-</div>
+        <input type="submit" value="Login"> </form> </div>
 
 <div id="Calculator" class="tabcontent"
     style="background-image:url('https://weiweics.com/wp-content/uploads/2019/07/Why-do-we-use-calculators-700x445.png');  background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">

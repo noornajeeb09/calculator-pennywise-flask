@@ -61,9 +61,8 @@ def show_signup():
         else:
            print(existing_user)
            return redirect(url_for('login'))
-           
 
-@app.route('/')
+           
 @app.route('/login', methods = ['GET', 'POST'])
 def show_login():
    if request.method =='POST':
