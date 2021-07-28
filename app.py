@@ -80,6 +80,18 @@ def Login():
            else:
                return redirect(url_for('signup'))
     
+@app.route('/transactions', methods = ['GET', 'POST'])
+def transactions():
+    transactions = mongo.db.transactions
+    amin = list(transactions.find({}))
+    print(amin)
+    #return redirect(url_for('transactions', transactions=amin))
+    return render_template("transactions.html", transactions=amin)
+
+
+        
+
+
 
 
 # @app.route('/signup', methods = ['POST', 'GET'])

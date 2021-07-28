@@ -12,7 +12,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Optima, sans serif;
+  font-family: ‘Gowun Dodum’, sans-serif;
 }
 
 #title {
@@ -33,6 +33,7 @@ body, html {
   width: 14.27%;
 }
 
+    
 .tablink:hover {
   background-color: #777;
 }
@@ -64,7 +65,7 @@ body, html {
 <button class="tablink" onclick="openPage('Sign Up', this, 'gray')">Sign Up</button>
 <button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
 <button class="tablink" onclick="openPage('Calculator', this, 'gray')">Calculator</button>
-<button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button>
+<button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')"><a href={{  url_for("transactions")  }} Transaction Tracker </a></button>
 <button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
 <button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
 
@@ -135,18 +136,19 @@ body, html {
 </div>
 
 <div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-    <form method="post" action="/transactions">
+    <!-- <form method="POST" action="/transactions"> -->
       <h1>Transactions</h1>
-      <div class="event-list">
+      <div class="add_transactions">
+          {{  url_for('transactions')  }}
         <ul>
-          {% for event in events %}
-            <li>{{ transactions.transaction }} - {{ transaction.amount }} ({{transactions.category}}) [<a href='/remove/{{event._id }}'>x</a>]</li>
+          {% for transaction in transactions %}
+            <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} - ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a href='/remove/{{transaction._id }}'>x</a>]</li>
           {% endfor %}
         </ul>
       </div> 
       <h3><a href="/sortevents">SORT </a>EVENTS</h3> 
       <h3>Go to <a href="/displayform">FORM</a></h3>         
-</div>
+    </div> 
 
 <div id="Analysis"style="background-image:url('http://argaamplus.s3.amazonaws.com/0dcec1d7-f70a-47fa-8fe9-24535fb846ef.jpg');" class="tabcontent">
   <h3>Analysis</h3>
