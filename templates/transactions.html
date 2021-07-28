@@ -61,12 +61,12 @@ body, html {
         <button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
         <button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
  <ul>
-          {% for transaction in transactions %}
+          <!-- {% for transaction in transactions %}
             <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} - ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a href='/remove/{{transaction._id }}'>x</a>]</li>
           {% endfor %}
-        </ul>
+        </ul> -->
 
-        
+
 <div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
     <!-- <form method="POST" action="/transactions"> -->
       <h1>Transactions</h1>
