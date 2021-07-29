@@ -38,8 +38,9 @@ def calculate():
     monthly_amount_left = int(monthly_income - monthly_expenses) 
     annual_amount_left = (monthly_amount_left * 12)
     monthly_amount_to_save = (goal_to_save - (current_savings + annual_amount_left))/12
-    
-    return (str(round(monthly_amount_to_save)))
+    msg="You need to save " + str(round(monthly_amount_to_save)) +" dollars per month."
+    print(msg)
+    return render_template('calcresults.html', msg=msg)
 
 
 
@@ -76,6 +77,7 @@ def Login():
        if login_user:
            if request.form['password'] == login_user['password']:
                session['username'] = request.form['username']
+               print(login_user['password'])
                return redirect(url_for('index'))
            else:
                return redirect(url_for('signup'))

@@ -1,218 +1,383 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
+    <style>
 
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
 
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
+        /* Set height of body and the document to 100% */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
 
-}
-.fontcolor {
-    color:white;
-}
+        }
 
-#title {
-    font-size: 75%;
-    font-family: 'Caveat', cursive;
-}
+        .fontcolor {
+            color: white;
+        }
 
-.homebody {
-    font-family: 'Comfortaa', cursive;
-}
-.dumdum {
-    font-family: 'Comfortaa', cursive;
-}
-#Calculator {
-    font-family: 'Comfortaa', cursive;
-}
+        #title {
+            font-size: 75%;
+            font-family: 'Caveat', cursive;
+        }
 
-.alert alert-info {
-    background-color: #4484CE;
-}
+        .alert alert-info {
+            font-family: 'Comfortaa', cursive;
+        }
 
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 14.27%;
-  font-family: 'Comfortaa', cursive;
-}
+        .homebody {
+            font-family: 'Comfortaa', cursive;
+        }
 
-    
-.tablink:hover {
-  background-color: #777;
-}
+        .dumdum {
+            font-family: 'Comfortaa', cursive;
+        }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-  font-family: 'Comfortaa', cursive;
-}
-#title {
-    font-family: 'Caveat', cursive;
-    font-size: 250%;
-}
+        #Calculator {
+            font-family: 'Comfortaa', cursive;
+        }
 
-#Home {background-color: white;}
-#Sign Up {background-color: white;}
-#Login {background-color: white;}
-#Calculator {background-color: white;}
-#Transaction Tracker {background-color: white;}
-#Analysis {background-color: white;}
-#Learn More {background-color: white;}
-</style>
+        .alert alert-info {
+            background-color: #4484CE;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 14.27%;
+            font-family: 'Comfortaa', cursive;
+        }
+
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: black;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            font-family: 'Comfortaa', cursive;
+        }
+
+        #title {
+            font-family: 'Caveat', cursive;
+            font-size: 250%;
+        }
+
+        #Home {
+            background-color: white;
+        }
+
+        #Sign Up {
+            background-color: white;
+        }
+
+        #Login {
+            background-color: white;
+        }
+
+        #Calculator {
+            background-color: white;
+        }
+
+        #Transaction Tracker {
+            background-color: white;
+        }
+
+        #Analysis {
+            background-color: white;
+        }
+
+        #Learn More {
+            background-color: white;
+        }
+    </style>
 </head>
-<body>
-<div>
-<button class="tablink" onclick="openPage('Home', this, 'gray')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('Sign Up', this, 'gray')">Sign Up</button>
-<button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
-<button class="tablink" onclick="openPage('Calculator', this, 'gray')">Calculator</button>
-<button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button>
-<!-- <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')"><a href={{  url_for("transactions")  }} Transaction Tracker </a></button> -->
-<button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
-<button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
 
-<!-- <button >Home</button>
+<body>
+    <div>
+        <button class="tablink" onclick="openPage('Home', this, 'gray')" id="defaultOpen">Home</button>
+        <button class="tablink" onclick="openPage('Sign Up', this, 'gray')">Sign Up</button>
+        <button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
+        <button class="tablink" onclick="openPage('Calculator', this, 'gray')">Calculator</button>
+        <!-- <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button> -->
+        <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')"><a
+                href={{  url_for("transactions")  }}> TransactionTracker </a></button>
+        <button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
+        <button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
+
+        <!-- <button >Home</button>
 <button >Sign Up</button>
 <button >Login</button>
 <button >Calculator</button>
 <button >Transaction Tracker</button>
 <button >Analysis</button>
 <button >Learn More </button> -->
-</div>
-<div class="alert alert-info" role="alert" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  Want personalized budgeting alerts and tips?  <a href="#" class="alert-link"><a href="<https://forms.gle/LrRT27x9m8qYXaXe6">Click here to sign up for Budget Buddy!!</a>. 
-</div>
-
-<div id="Home" class="tabcontent" style="background-image:url('https://media.istockphoto.com/photos/white-piggy-bank-on-yellow-picture-id841053770?k=6&m=841053770&s=612x612&w=0&h=egxzk5SZGQfo2m2UG4n2fYMbDna7XPj07hdAYnwIG0o='); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-<div id="title" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
- <h1><center> PennyWise: Your Personal Finance Tracker</center></h3></h1> </div>
-  <center> <br></br>
-    <div class="homebody" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"><h3>Planning for your future isn't scary. Be financially wise with Pennywise™!</h3></center>
-  <b>
-    <ul style="list-style-type:none;" >
-      <br></br>
-      <div class="dumdum" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-     <center> <li style="color:black;">Get a clear picture of how you’re spending your money with easy-to-read graphs and pie charts 📊 /</li>
-      <li style="color:black;">Track your expenses 💵</li>
-      <li style="color:black;">Set up savings goals and keep track of your progress with SaveSmartCalculator ✅</li>
-      <li style="color:black;">Create your own financial calendar 🗓</li>
-      <li style="color:black;">Set up budget alerts with BudgetBuddy, so you know when you’re spending too much 🚨</li </center> 
-      </div> </b>
     </div>
+    <div class="alert alert-info" role="alert"> Want personalized
+        budgeting alerts and tips? <a href="#" class="alert-link"><a href="https://forms.gle/LrRT27x9m8qYXaXe6">Click
+                here to sign up for Budget Buddy!!</a> >
+
+            <div id="Home" class="tabcontent"
+                style="background-image:url('https://media.istockphoto.com/photos/white-piggy-bank-on-yellow-picture-id841053770?k=6&m=841053770&s=612x612&w=0&h=egxzk5SZGQfo2m2UG4n2fYMbDna7XPj07hdAYnwIG0o='); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+                <div id="title" <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+                    <h1>
+                        <center> PennyWise: Your Personal Finance Tracker</center>
+                        </h3>
+                    </h1>
+                </div>
+                <center> <br></br>
+                    <div class="homebody" <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+                        <h3>Planning for your future isn't scary. Be financially wise with Pennywise™!</h3>
+                </center>
+                <b>
+                    <ul style="list-style-type:none;">
+                        <br></br>
+                        <div class="dumdum" <link rel="preconnect" href="https://fonts.googleapis.com">
+                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+                                rel="stylesheet">
+                            <center>
+                                <li style="color:black;">Get a clear picture of how you’re spending your money with
+                                    easy-to-read graphs and pie charts 📊 /</li>
+                                <li style="color:black;">Track your expenses 💵</li>
+                                <li style="color:black;">Set up savings goals and keep track of your progress with
+                                    SaveSmartCalculator ✅</li>
+                                <li style="color:black;">Create your own financial calendar 🗓</li>
+                                <li style="color:black;">Set up budget alerts with BudgetBuddy, so you know when you’re
+                                    spending too much 🚨</li </center>
+                        </div>
+                </b>
+            </div>
     </div>
 
-<div id="Sign Up" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-  <h3>Sign Up</h3>
-  <form method="POST" action="/signup"> 
-  <label for="name">Name:</label><br>
-  <input type="text" id="username" name="username" value=""><br><br>
-  <label for="password">Password:</label><br>
-  <input type="text" id="password" name="password" value=""><br><br>
-  <input type="submit" value="Sign Up"> </form>  
-</div>
+    <div id="Sign Up" class="tabcontent"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;"
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <h3>Sign Up</h3>
+        <form method="POST" action="/signup">
+            <label for="name">Name:</label><br>
+            <input type="text" id="username" name="username" value=""><br><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password" value=""><br><br>
+            <input type="submit" value="Sign Up"> </form>
+    </div>
 
-<div id="Login" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <div id="Login" class="tabcontent"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fquidsinmagazine.com%2Fwp-content%2Fuploads%2F2018%2F11%2Fbigstock-Pink-Piggy-Bank-On-Color-Backg-253177441-900x450.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
         <h3>Login</h3>
-        <form method="POST" action="/Login"> 
-        <label for="name">Name:</label><br>
-        <input type="text" id="username" name="username" value=""><br><br>
-        <label for="password">Password:</label><br>
-        <input type="text" id="password" name="password" value=""><br><br>
-        <input type="submit" value="Login"> </form> </div>
+        <form method="POST" action="/Login">
+            <label for="name">Name:</label><br>
+            <input type="text" id="username" name="username" value=""><br><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password" value=""><br><br>
+            <input type="submit" value="Login"> </form>
+    </div>
 
-<div id="Calculator" class="tabcontent"
-    style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.crispedge.com%2Fffab0f.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;" <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <h1>Welcome to Your SaveSmart Calculator!</h1>
-    <h2> Find out how much you need to save monthly to reach your annual goal.</h2>
-    <p>How much money do you have saved up currently?</p>
-    <form method="post" action="/calculate">
-    <input type="text" name="diffname1" placeholder="Enter your answer here" />
-    <p>How much money do you make each month?</p>
-    <input type="text" name="2" placeholder="Enter your answer here" />
-    <p>How much money do you spend each month?</p>
-    <input type="text" name="3" placeholder="Enter your answer here" />
-    <p>How much money do you want to save annually?</p>
-    <input type="text" name="gifchoice" placeholder="Enter your answer here" />
-    <input type="submit" value="Submit" />
-    </form>
+    <div id="Calculator" class="tabcontent"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.crispedge.com%2Fffab0f.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;"
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <h1>Welcome to Your SaveSmart Calculator!</h1>
+        <h2> Find out how much you need to save monthly to reach your annual goal.</h2>
+        <p>How much money do you have saved up currently?</p>
+        <form method="post" action="/calculate">
+            <input type="text" name="diffname1" placeholder="Enter your answer here" />
+            <p>How much money do you make each month?</p>
+            <input type="text" name="2" placeholder="Enter your answer here" />
+            <p>How much money do you spend each month?</p>
+            <input type="text" name="3" placeholder="Enter your answer here" />
+            <p>How much money do you want to save annually?</p>
+            <input type="text" name="gifchoice" placeholder="Enter your answer here" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div id="Transaction Tracker" class="tabcontent"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+        <!-- <form method="POST" action="/transactions"> -->
+        <h1>Transactions</h1>
+        <div class="add_transactions">
+            <!-- {{  url_for('transactions')  }} -->
+            <ul>
+                {% for transaction in transactions %}
+                <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} -
+                    ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a
+                        href='/remove/{{transaction._id }}'>x</a>]</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <h3><a href="/sortevents">SORT </a>EVENTS</h3>
+        <h3>Go to <a href="/displayform">FORM</a></h3>
+    </div>
+
+    <div id="Analysis"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.crispedge.com%2Fffab0f.png');"
+        class="tabcontent">
+        <h3>Analysis</h3>
+        <h2>
+            <center>:construction:This page is under construction. Check back soon! :construction: </center>
+        </h2>
+    </div>
+    <div>
+        <div id="Learn More" class="tabcontent"
+            style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+            <div class="fontcolor" style="color:white" <b>
+                <h3> Credit Cards vs. Debit Cards</h3> </b>
+                <h4>Which one is right for you? </h4>
+                <p> Practice, early and often, with a credit or debit card can help you form healthy money habits as you
+                    get older. </p>
+                <p> Every year, more and more adolescents aged 8-13 are beginning their financial journeys with debit
+                    and credit cards. However, it’s important to consider and understand the differences between each
+                    one to know which one is better for you! </p>
+                <div class="row">
+                    <div class="col-6 col-sm-4"> <b>Credit Cards: rely on credit that you pay back to the bank to make
+                            purchases </b> </div>
+                    <div class="col-6 col-sm-4">
+                        <ul>
+                            <li> Loan from your card issuer </li>
+                            <li>Can yield very high interest rates</li>
+                            <li>May have a yearly fee</li>
+                            <li>Rewards like points, miles, cash back</li>
+                            </p>
+                            <dtton>
+                    </div>
+                    <div class="row"></div>
+                    <div class="col-6 col-sm-4"> <b> Debit Cards: rely on your money that you have saved in the bank
+                        </b> </div>
+                    <div class="col-6 col-sm-4">
+                        <ul>
+                            <li>Money comes from your bank account </li>
+                            <li>No repayment needed; just spend what you have</li>
+                            <li>Usually no fees</li>
+                            <li>Usually no rewards</li>
+                            </p>
+
+                            <div>
+
+                                <body>
+                                    <iframe src="https://forms.gle/KMFkgzLmD3BGpXNB9" width="1230" height="600"
+                                        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                </body>
+                            </div>
+
+                            <!-- <h3> Got more questions? We’ve got answers.</h3>
+<h4>Post questions or ideas you want here, and our team will get back to you.</h4>
+<div class="container">
+  <form action="/learnmore">
+    <div class="row">
+      <div class="col-25">
+        <label style="color:black" for="email">Email</label>
+        </div>
+      <div class="col-75">
+        <input type="text" id="Email" name="Email" placeholder="Type your email here...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label style="color:black" ="Questions">Questions</label>
+      </div>
+      <div class="col-75">
+        <textarea id="Questions" name="Questions" placeholder="Type you questions here..." style="height:200px"; style="width:1000px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
 </div>
 
-<div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-    <!-- <form method="POST" action="/transactions"> -->
-      <h1>Transactions</h1>
-      <div class="add_transactions">
-          {{  url_for('transactions')  }}
-        <ul>
-          {% for transaction in transactions %}
-            <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} - ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a href='/remove/{{transaction._id }}'>x</a>]</li>
-          {% endfor %}
-        </ul>
-      </div> 
-      <h3><a href="/sortevents">SORT </a>EVENTS</h3> 
-      <h3>Go to <a href="/displayform">FORM</a></h3>         
-    </div> 
+<style>
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
-<div id="Analysis"style="background-image:url('http://argaamplus.s3.amazonaws.com/0dcec1d7-f70a-47fa-8fe9-24535fb846ef.jpg');" class="tabcontent">
-  <h3>Analysis</h3>
-  <p>Write stuff here.</p>
-</div>
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
 
-<div id="Learn More" class="tabcontent" style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-<div class="fontcolor" style="color:white"
-    <b><h3> Credit Cards vs. Debit Cards</h3> </b>
-<h4>Which one is right for you? </h4>
-<p> Practice, early and often, with a credit or debit card can help you form healthy money habits as you get older. </p>
-<p> Every year, more and more adolescents aged 8-13 are beginning their financial journeys with debit and credit cards. However, it’s important to consider and understand the differences between each one to know which one is better for you! </p>
-<div class="row">
-<div class="col-6 col-sm-4"> <b>Credit Cards: rely on credit that you pay back to the bank to make purchases </b> </div>
-<div class="col-6 col-sm-4"> 
-<ul>
-<li> Loan from your card issuer </li>
-<li>Can yield very high interest rates</li>
-<li>May have a yearly fee</li>
-<li>Rewards like points, miles, cash back</li></p>
-<dtton>
-</div>
-<div class="row"></div>
-<div class="col-6 col-sm-4"> <b> Debit Cards: rely on your money that you have saved in the bank </b> </div>
-<div class="col-6 col-sm-4"> 
-<ul>
-<li>Money comes from your bank account </li>
-<li>No repayment needed; just spend what you have</li>
-<li>Usually no fees</li>
-<li>Usually no rewards</li></p>
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4484CE;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
 
-<!-- <h3> Got more questions? We’ve got answers.</h3>
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</div> -->
+
+                            <!-- <h3> Got more questions? We’ve got answers.</h3>
 <h4>Post questions or ideas you want here, and our team will get back to you.</h4>
 <form> </div>
   <div class=“form-group”>
@@ -225,24 +390,25 @@ body, html {
   </div> -->
 
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
+                            <script>
+                                function openPage(pageName, elmnt, color) {
+                                    var i, tabcontent, tablinks;
+                                    tabcontent = document.getElementsByClassName("tabcontent");
+                                    for (i = 0; i < tabcontent.length; i++) {
+                                        tabcontent[i].style.display = "none";
+                                    }
+                                    tablinks = document.getElementsByClassName("tablink");
+                                    for (i = 0; i < tablinks.length; i++) {
+                                        tablinks[i].style.backgroundColor = "";
+                                    }
+                                    document.getElementById(pageName).style.display = "block";
+                                    elmnt.style.backgroundColor = color;
+                                }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+                                // Get the element with id="defaultOpen" and click on it
+                                document.getElementById("defaultOpen").click();
+                            </script>
 
 </body>
-</html> 
+
+</html>
