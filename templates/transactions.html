@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div {
-  background-image: url('https://www.employmenthelp.org/wp-content/uploads/Workshops-Header-Background.png');
-}
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Optima, sans serif;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 14.27%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: white;}
-#Sign Up {background-color: white;}
-#Login {background-color: white;}
-#Calculator {background-color: white;}
-#Transaction Tracker {background-color: white;}
-#Analysis {background-color: white;}
-#Learn More {background-color: white;}
-</style>
+    <style>
+        div {
+            background-image: url('https://www.employmenthelp.org/wp-content/uploads/Workshops-Header-Background.png');
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        /* Set height of body and the document to 100% */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Optima, sans serif;
+        }
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 14.27%;
+        }
+        .tablink:hover {
+            background-color: #777;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: black;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+        #Home {
+            background-color: white;
+        }
+        #Sign Up {
+            background-color: white;
+        }
+        #Login {
+            background-color: white;
+        }
+        #Calculator {
+            background-color: white;
+        }
+        #Transaction Tracker {
+            background-color: white;
+        }
+        #Analysis {
+            background-color: white;
+        }
+        #Learn More {
+            background-color: white;
+        }
+    </style>
 </head>
-    <body>
-        <div>
+<body>
+    <div>
         <button class="tablink" onclick="openPage('Home', this, 'gray')">Home</button>
         <button class="tablink" onclick="openPage('Sign Up', this, 'gray')" id="defaultOpen">Sign Up</button>
         <button class="tablink" onclick="openPage('Login', this, 'gray')">Login</button>
@@ -60,37 +72,32 @@ body, html {
         <button class="tablink" onclick="openPage('Transaction Tracker', this, 'gray')">Transaction Tracker</button>
         <button class="tablink" onclick="openPage('Analysis', this, 'gray')"> Analysis</button>
         <button class="tablink" onclick="openPage('Learn More', this, 'gray')">Learn More </button>
- <ul>
-          <!-- {% for transaction in transactions %}
-            <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} - ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a href='/remove/{{transaction._id }}'>x</a>]</li>
-          {% endfor %}
-        </ul> -->
-
-
-        
-
-<!-- <div id="Transaction Tracker" class="tabcontent"style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-    <!-- <form method="POST" action="/transactions"> -->
-      <!-- <h1>Transactions</h1> -->
-
-
-      <!-- <form method="post" action="/events/new">
-    <label for="event_name">Event Name:</label>
-    <input type="text" name="event_name" value="">
-    <label for="event_date">Date:</label>
-    <input type="date" name="event_date" value="">
-    <label for="name">Name:</label>
-    <input type="name" name="user_name" value="">
-    <input type="submit" value="Submit">
-    </form> -->
-
-      <!-- <div class="add_transactions">
-        <ul>
-          {% for transaction in transactions %}
-            <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} - ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }})</li>
-          {% endfor %}
-        </ul>
-      </div> 
-    </div>  
-    </body>
-</html> --> -->
+    </div>
+    <!-- <div id="Transaction Tracker" class="tabcontent"
+        style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+        <div class="add_transactions">
+        </div>
+    </div> -->
+    
+    <div class="add_transactions"></div>
+    <h1>Transactions</h1>
+    <form method="post" action='/transactions'>
+        <p><label for="t_name">Transaction Name:</label>
+        <input type="text" name="t_name" value=""></p>
+        <p></p><label for="t_date">Date:</label>
+        <input type="date" name="t_date" value=""></p>
+        <p></p><label for="t_amount">Amount:</label>
+        <input type="number" min="0" step="any"name="t_amount" value=""></p>
+        <p></p><label for="t_type">Transaction Type:</label>
+        <input type="text" name="t_type" value=""></p>
+        <p></p><input type="submit" value="Submit"></p>
+    </form>
+    <ul>
+        {% for transaction in transactions %}
+        <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} -
+            ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) </li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

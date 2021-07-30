@@ -219,20 +219,39 @@
 
     <!-- <div id="Transaction Tracker" class="tabcontent"
         style="background-image:url('https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1491613.jpg');background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-        <form method="POST" action="/transactions"> -->
-        <!-- <h1>Transactions</h1>
-        <div class="add_transactions">
-            {{  url_for('transactions')  }} -->
+        <form method="POST" action="/transactions">
+                <div class="add_transactions"></div>
+    <h1>Transactions</h1>
+        <p><label for="t_name">Transaction Name:</label>
+        <input type="text" name="t_name" value=""></p>
+        <p></p><label for="t_date">Date:</label>
+        <input type="date" name="t_date" value=""></p>
+        <p></p><label for="t_amount">Amount:</label>
+        <input type="number" min="0" step="any"name="t_amount" value=""></p>
+        <p></p><label for="t_type">Transaction Type:</label>
+        <input type="text" name="t_type" value=""></p>
+        <p></p><input type="submit" value="Submit"></p>
+    </form>
+    <ul>
+        {% for transaction in transactions %}
+        <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} -
+            ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) </li>
+        {% endfor %}
+    </ul>
+    </div> -->
+        <!-- <!-- <h1>Transactions</h1> -->
+        <!-- <div class="add_transactions">
+            {{  url_for('transactions')  }}
             <ul>
-                <!-- {% for transaction in transactions %}
+                {% for transaction in transactions %}
                 <li>{{  transaction.transaction_name }} - {{ transaction.transaction_amount }} -
                     ({{  transaction.transaction_category  }} - {{  transaction.transaction_date  }}) [<a
                         href='/remove/{{transaction._id }}'>x</a>]</li>
                 {% endfor %}
-            </ul> -->
-        <!-- </div>
+            </ul>
+        </div>
         <h3><a href="/sortevents">SORT </a>EVENTS</h3>
-        <h3>Go to <a href="/displayform">FORM</a></h3>
+        <h3>Go to <a href="/displayform">FORM</a></h3> -->
     </div> -->
 
     <div id="Analysis"
